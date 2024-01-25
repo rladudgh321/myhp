@@ -1,23 +1,25 @@
-import Consult from "@/indexPageComponents/Consult";
-import DetailIntroduce from "@/indexPageComponents/DetailIntroduce";
-import MainPicture from "@/indexPageComponents/MainPicture";
-import MenuBarLayout from "@/indexPageComponents/MenuBarLayout";
-import Price from "@/indexPageComponents/Price";
-import QnA from "@/indexPageComponents/QnA";
-import RealEstate from "@/indexPageComponents/RealEstate";
-import Review from "@/indexPageComponents/Review";
+import Consult from "@/components/index/Consult";
+import MainPicture from "@/components/index/MainPicture";
+import DetailIntroduce from "@/components/index/DetailIntroduce";
+import AppLayout from "@/AppLayout";
+import Price from "@/components/index/Price";
+import QnA from "@/components/index/QnA";
+import RealEstate from "@/components/index/RealEstate";
+import Review from "@/components/index/Review";
+import Strength from "@/components/index/Strength";
 
 const Home = () => {
   return (
-    <MenuBarLayout>
+    <AppLayout>
       <MainPicture />
       <RealEstate />
       <DetailIntroduce />
+      <Strength />
       <Review />
       <QnA />
       <Price />
       <Consult />
-    </MenuBarLayout>
+    </AppLayout>
   );
 }
 

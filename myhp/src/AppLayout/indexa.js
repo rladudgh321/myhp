@@ -4,9 +4,9 @@ import { MenuOutlined } from '@ant-design/icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { LOG_OUT_REQUEST } from '@/reducer/user';
 import Link from 'next/link';
-import Footer from '@/indexPageComponents/Footer';
+import Footer from '@/AppLayout/Footer';
 
-const MainBarLayout = ({children}) => {
+const AppLayout = ({children}) => {
   const dispatch = useDispatch();
   // const { me } = useSelector((state) => state.user);
     const me = false;
@@ -77,15 +77,15 @@ const items = [
 
     return (
         <>
-            <Row style={{ minHeight:'50px', height:'10vh', position: 'fixed', top:0, left:0, right: 0 }}>
-                <Col xs={6}>
-                    <div style={{width: '100%', height: '100%', position: 'relative'}}>
+            <Row>
+                <Col xs={6} md={6} sm={6}>
+                    <div style={{width: '100%', height: '100%'}}>
                         <Link href='/'>
-                          <img src='/img/logo.png' alt='logo' />
+                          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%86%8C%EB%B0%A9%EA%B3%B5%EB%AC%B4%EC%9B%90_%EC%86%8C%EB%A7%A4%ED%91%9C%EC%9E%A5.jpg/220px-%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%86%8C%EB%B0%A9%EA%B3%B5%EB%AC%B4%EC%9B%90_%EC%86%8C%EB%A7%A4%ED%91%9C%EC%9E%A5.jpg' alt='logo' width={50} height={50} />
                         </Link>
                     </div>
                 </Col>
-                <Col xs={18} md={0}>
+                <Col xs={18} md={0} sm={0}>
                     <MenuOutlined onClick={onToggleMenuBtn} style={{ float:'right', color:'gray',borderColor:'silver', background:'#fff', border:'1px solid gray',fontSize:'1.2rem', padding:'5px 10px 5px 10px', margin:'10px', borderRadius:'5px'}} />
                 </Col>
                 { menu && (
@@ -100,15 +100,12 @@ const items = [
                     }}
                     >
                         <Menu items={items} style={{ position:'fixed',minWidth:'200px', top:0, right:'75vw', left:0, bottom:0, border:'1px solid gray', zIndex:'5000' }} ></Menu>
-                        <div style={{ position:'fixed', width:'100vw', top:0, right:0, left:0, bottom:0,
-                        backgroundColor:'rgba(0,0,0,0.5)', zIndex:'10'
+                        <div style={{ width:'100vw', backgroundColor:'rgba(0,0,0,0.5)', zIndex:'10000'
                       }} onClick={onToggleMenuBtn}></div>
                       </ConfigProvider>
                 ) }
-                <Col xs={0} md={18}>
-                  <Menu mode='horizontal' items={items}>
-
-                  </Menu>
+                <Col xs={0} md={18} sm={18}>
+                  <Menu mode='horizontal' items={items} />
                 </Col>
             </Row>
             {children}
@@ -117,4 +114,4 @@ const items = [
     );
 }
 
-export default MainBarLayout;
+export default AppLayout;
