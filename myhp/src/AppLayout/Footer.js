@@ -2,7 +2,7 @@ import { Button } from "antd";
 
 const Footer = () => {
   return (
-    <>
+    <div style={{ maxWidth:'1110px', maxHeight:'1760px', margin: '0 auto' }}>
       <div className="footer_img">
         <img src="https://bigwood.kr/static/images/logo.png?v=1" />
       </div>
@@ -17,8 +17,8 @@ const Footer = () => {
       <div><Button>신청서 바로가기</Button></div>
 
       <div className="footer_line" style={{ borderTop: '1px solid silver' }}></div>
-      <div>© 2016 Bigwood Company. All Rights Reserved</div>
-    </>
+      <div>© 2024 Bigwood Company. All Rights Reserved</div>
+    </div>
   );
 }
 

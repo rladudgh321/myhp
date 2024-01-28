@@ -33,13 +33,13 @@ const Strength = () => {
     src: 'https://bigwood.kr/static/images/icons/users.png'
   }]
   return (
-    <>
+    <div style={{ maxWidth:'1110px', maxHeight:'1760px', margin: '0 auto' }}>
       <div style={{ textAlign: 'center' }}>
-        <div>큰나무 솔루션만의 강점</div>
-        <div>
-          큰나무솔루션만의 특별한 강점을 확인해보세요. <br />
-          중개사님의 매출을 올려줄 큰나무 솔루션만의 시스템
+        <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>큰나무 솔루션만의 강점</div>
+        <div style={{ marginTop: '15px', fontSize: '1.3rem' }}>
+          큰나무솔루션만의 특별한 강점을 확인해보세요
         </div>
+        <div style={{ marginTop: '15px', fontSize: '1.3rem' }}>중개사님의 매출을 올려줄 큰나무 솔루션만의 시스템</div>
       </div>
       <List
         bordered
@@ -60,7 +60,7 @@ const Strength = () => {
         }}
       >
       </List>
-    </>
+    </div>
   );
 }
 

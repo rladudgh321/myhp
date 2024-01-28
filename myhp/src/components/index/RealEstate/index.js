@@ -15,7 +15,7 @@ const RealEstate = () => {
     image: { src: 'https://bigwood.kr/static/images/sample12.png' },
   }]
   return (
-    <div style={{ textAlign: 'center', padding: '10px' }}>
+    <div style={{ textAlign: 'center', padding: '10px', maxWidth:'1110px', maxHeight:'1760px', margin: '0 auto' }}>
       <div style={{ fontWeight: 'bold', fontSize: '2rem' }}>부동산 홈페이지 샘플보기</div>
       <div style={{ marginTop: '15px', fontSize: '1.3rem' }}>성공적인 부동산 매물홍보를 위해 준비된 파트너 큰나무 솔루션</div>
       <div style={{ marginTop: '15px', fontSize: '1.3rem' }}>중개사분들의 부동산 마케팅을 책임지는 비즈니스 파트너 입니다.</div>

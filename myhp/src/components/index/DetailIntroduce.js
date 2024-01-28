@@ -1,11 +1,11 @@
 const DetailIntroduce = () => {
   const content_title = { fontSize: '1.3rem'};
   return (
-    <>
+    <div style={{ maxWidth:'1110px', maxHeight:'1760px', margin: '0 auto' }}>
       <div style={{ textAlign: 'center', margin: '30px 0' }}>
         <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>홈페이지 솔루션 소개</div>
-        <div>샘플을 확인해 보세요 솔루션하나로 다양한 홈페이지 구성이 가능합니다.</div>
-        <div>매물관리부터 디자인, 매물종류, 테마 및 기타설정이 관리자에서 변경이 가능합니다.</div>
+        <div style={{ marginTop: '15px', fontSize: '1.3rem' }}>샘플을 확인해 보세요 솔루션하나로 다양한 홈페이지 구성이 가능합니다.</div>
+        <div style={{ marginTop: '15px', fontSize: '1.3rem' }}>매물관리부터 디자인, 매물종류, 테마 및 기타설정이 관리자에서 변경이 가능합니다.</div>
       </div>
       <div className="DetailIntroduce_content" style={{ display: 'flex' }}>
         <div className="DetailIntroduce_content_child">
@@ -30,7 +30,7 @@ const DetailIntroduce = () => {
           <img src="https://bigwood.kr/static/images/intro2.png" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

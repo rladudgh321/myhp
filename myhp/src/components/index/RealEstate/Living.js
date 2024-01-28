@@ -3,7 +3,7 @@ import { List, Button } from "antd";
 const Living = ({items, title}) => {
   return (
     <List
-        header={<div style={{ textAlign:'initial', fontWeight:'bold', fontSize:'1.2rem' }}>{title}</div>}
+        header={<div style={{ textAlign:'initial', fontWeight:'bold', fontSize:'1.2rem', maxWidth:'1110px', maxHeight:'1760px', margin: '0 auto' }}>{title}</div>}
         grid={{ md: 4, sm: 2, xs:2 }}
         bordered
         dataSource={items}
